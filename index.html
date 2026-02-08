@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twin Dragons — Слот</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+
+        <!-- ===== ВЕРХНЯЯ СЕКЦИЯ: Логотип + Шкала температуры ===== -->
+        <div id="top-section">
+            <div id="logo">
+                <span class="logo-ice">TWIN</span>
+                <span class="logo-fire">DRAGONS</span>
+            </div>
+
+            <!-- Шкала температуры (видна только во фриспинах) -->
+            <div id="temperature-section" style="display:none;">
+                <div id="temp-scale-container">
+                    <div id="temp-scale-bar">
+                        <div id="temp-cold-zone"></div>
+                        <div id="temp-hot-zone"></div>
+                        <div id="temp-marker">
+                            <div id="temp-marker-eye"></div>
+                        </div>
+                    </div>
+                    <div id="temp-labels">
+                        <span class="temp-label" data-val="-30">-30</span>
+                        <span class="temp-label" data-val="-20">-20</span>
+                        <span class="temp-label" data-val="-10">-10</span>
+                        <span class="temp-label" data-val="0">0</span>
+                        <span class="temp-label" data-val="10">+10</span>
+                        <span class="temp-label" data-val="20">+20</span>
+                        <span class="temp-label" data-val="30">+30</span>
+                    </div>
+                </div>
+
+                <!-- Счётчик фриспинов -->
+                <div id="fs-counter">
+                    <span>БЕСПЛАТНЫЕ СПИНЫ: </span>
+                    <span id="fs-current">0</span>
+                    <span> / </span>
+                    <span id="fs-total">0</span>
+                    <span id="fs-multiplier" style="display:none;"> | МНОЖИТЕЛЬ: <strong id="fs-mult-value">x1</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ОСНОВНАЯ СЕКЦИЯ: Драконы + Барабаны ===== -->
+        <div id="main-section">
+
+            <!-- Ледяной дракон (слева) -->
+            <div id="ice-dragon" class="dragon dragon-left">
+                <img src="img/ice-dragon.png" alt="Ледяной Дракон" class="dragon-img ice-img">
+                <div class="dragon-breath-effect ice-breath-effect" id="ice-breath"></div>
+                <div class="dragon-label">❄ ЛЕДЯНОЙ</div>
+            </div>
+
+            <!-- Контейнер барабанов -->
+            <div id="reels-wrapper">
+                <div id="reels-frame">
+                    <div id="reels">
+                        <!-- Рил 0 -->
+                        <div class="reel" id="reel-0">
+                            <div class="symbol-cell" id="cell-0-0"></div>
+                            <div class="symbol-cell" id="cell-0-1"></div>
+                            <div class="symbol-cell" id="cell-0-2"></div>
+                        </div>
+                        <!-- Рил 1 -->
+                        <div class="reel" id="reel-1">
+                            <div class="symbol-cell" id="cell-1-0"></div>
+                            <div class="symbol-cell" id="cell-1-1"></div>
+                            <div class="symbol-cell" id="cell-1-2"></div>
+                        </div>
+                        <!-- Рил 2 -->
+                        <div class="reel" id="reel-2">
+                            <div class="symbol-cell" id="cell-2-0"></div>
+                            <div class="symbol-cell" id="cell-2-1"></div>
+                            <div class="symbol-cell" id="cell-2-2"></div>
+                        </div>
+                        <!-- Рил 3 -->
+                        <div class="reel" id="reel-3">
+                            <div class="symbol-cell" id="cell-3-0"></div>
+                            <div class="symbol-cell" id="cell-3-1"></div>
+                            <div class="symbol-cell" id="cell-3-2"></div>
+                        </div>
+                        <!-- Рил 4 -->
+                        <div class="reel" id="reel-4">
+                            <div class="symbol-cell" id="cell-4-0"></div>
+                            <div class="symbol-cell" id="cell-4-1"></div>
+                            <div class="symbol-cell" id="cell-4-2"></div>
+                        </div>
+                    </div>
+                    <!-- Номера линий слева и справа -->
+                    <div id="payline-numbers-left" class="payline-numbers"></div>
+                    <div id="payline-numbers-right" class="payline-numbers"></div>
+                </div>
+            </div>
+
+            <!-- Огненный дракон (справа) -->
+            <div id="fire-dragon" class="dragon dragon-right">
+                <img src="img/fire-dragon.png" alt="Огненный Дракон" class="dragon-img fire-img">
+                <div class="dragon-breath-effect fire-breath-effect" id="fire-breath"></div>
+                <div class="dragon-label">🔥 ОГНЕННЫЙ</div>
+            </div>
+        </div>
+
+        <!-- ===== НИЖНЯЯ СЕКЦИЯ: Инфо + Управление ===== -->
+        <div id="bottom-section">
+            <!-- Водяной знак демо (над панелью баланса/ставки/выигрыша) -->
+            <div id="demo-watermark">Demo created by @holy_tm</div>
+            <!-- Информационная панель -->
+            <div id="info-panel">
+                <div class="info-item">
+                    <span class="info-label">БАЛАНС</span>
+                    <span class="info-value" id="balance-display">10 000.00</span>
+                </div>
+                <div class="info-item bet-item">
+                    <button class="bet-btn" id="btn-bet-down">◀</button>
+                    <div>
+                        <span class="info-label">СТАВКА</span>
+                        <span class="info-value" id="bet-display">20.00</span>
+                    </div>
+                    <button class="bet-btn" id="btn-bet-up">▶</button>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">ВЫИГРЫШ</span>
+                    <span class="info-value win-value" id="win-display">0.00</span>
+                </div>
+            </div>
+
+            <!-- Панель управления -->
+            <div id="controls">
+                <button class="ctrl-btn secondary" id="btn-paytable">
+                    <span class="btn-icon">📋</span>
+                    <span>ТАБЛИЦА ВЫПЛАТ</span>
+                </button>
+                <button class="ctrl-btn secondary" id="btn-max-bet">
+                    <span class="btn-icon">⬆</span>
+                    <span>МАКС. СТАВКА</span>
+                </button>
+                <button class="ctrl-btn primary" id="btn-spin">
+                    <span class="btn-icon spin-icon">▶</span>
+                    <span>СПИН</span>
+                </button>
+                <button class="ctrl-btn buy-btn" id="btn-buy-bonus">
+                    <span class="btn-icon">🐉</span>
+                    <span>КУПИТЬ БОНУС — 200</span>
+                </button>
+                <button class="ctrl-btn secondary" id="btn-auto">
+                    <span class="btn-icon">🔄</span>
+                    <span>АВТОСПИН</span>
+                </button>
+                <button class="ctrl-btn secondary" id="btn-settings">
+                    <span class="btn-icon">⚙</span>
+                    <span>НАСТРОЙКИ</span>
+                </button>
+            </div>
+
+            <!-- Сообщение -->
+            <div id="message-bar"></div>
+        </div>
+
+        <!-- ===== ОВЕРЛЕЙ УВЕДОМЛЕНИЙ ===== -->
+        <div id="notification-overlay" style="display:none;">
+            <div id="notification-content">
+                <div id="notification-title"></div>
+                <div id="notification-text"></div>
+            </div>
+        </div>
+
+        <!-- ===== МОДАЛЬНОЕ ОКНО: Таблица выплат ===== -->
+        <div id="paytable-overlay" style="display:none;">
+            <div id="paytable-modal">
+                <div id="paytable-header">
+                    <h2>ТАБЛИЦА ВЫПЛАТ</h2>
+                    <button id="paytable-close">✕</button>
+                </div>
+                <div id="paytable-content"></div>
+            </div>
+        </div>
+
+        <!-- ===== МОДАЛЬНОЕ ОКНО: Настройки ===== -->
+        <div id="settings-overlay" style="display:none;">
+            <div id="settings-modal">
+                <div id="settings-header">
+                    <h2>НАСТРОЙКИ</h2>
+                    <button id="settings-close">✕</button>
+                </div>
+                <div id="settings-content">
+                    <div class="setting-row">
+                        <label>Скорость вращения</label>
+                        <select id="spin-speed">
+                            <option value="fast">Быстро</option>
+                            <option value="normal" selected>Нормально</option>
+                            <option value="slow">Медленно</option>
+                        </select>
+                    </div>
+                    <div class="setting-row">
+                        <label>Звук вкл/выкл</label>
+                        <input type="checkbox" id="sound-toggle" checked>
+                    </div>
+                    <div class="setting-row">
+                        <label>Громкость</label>
+                        <input type="range" id="volume-slider" min="0" max="100" value="40" style="width:120px; accent-color: #ffd700;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="sounds.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
