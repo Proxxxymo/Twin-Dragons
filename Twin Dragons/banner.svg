@@ -1,253 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
-  <defs>
-    <!-- $>=: BQ<=K9 3@0485=B -->
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#080818"/>
-      <stop offset="50%" stop-color="#101030"/>
-      <stop offset="100%" stop-color="#080818"/>
-    </linearGradient>
-    <!-- 54O=>9 3@0485=B -->
-    <linearGradient id="iceGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#b0e0ff"/>
-      <stop offset="50%" stop-color="#00c8ff"/>
-      <stop offset="100%" stop-color="#004080"/>
-    </linearGradient>
-    <!-- 3=5==K9 3@0485=B -->
-    <linearGradient id="fireGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffe44d"/>
-      <stop offset="50%" stop-color="#ff6600"/>
-      <stop offset="100%" stop-color="#cc2200"/>
-    </linearGradient>
-    <!-- >;>B>9 3@0485=B 4;O B5:AB0 -->
-    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffe44d"/>
-      <stop offset="50%" stop-color="#ffd700"/>
-      <stop offset="100%" stop-color="#b8860b"/>
-    </linearGradient>
-    <!-- @0485=B H:0;K B5<?5@0BC@K -->
-    <linearGradient id="scaleGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#001050"/>
-      <stop offset="30%" stop-color="#0060cc"/>
-      <stop offset="50%" stop-color="#888888"/>
-      <stop offset="70%" stop-color="#cc4400"/>
-      <stop offset="100%" stop-color="#ff5500"/>
-    </linearGradient>
-    <!-- !25G5=85 -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="bigGlow">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="iceGlow">
-      <feGaussianBlur stdDeviation="12" result="blur"/>
-      <feFlood flood-color="#00c8ff" flood-opacity="0.5"/>
-      <feComposite in2="blur" operator="in"/>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="fireGlow">
-      <feGaussianBlur stdDeviation="12" result="blur"/>
-      <feFlood flood-color="#ff6600" flood-opacity="0.5"/>
-      <feComposite in2="blur" operator="in"/>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <!-- 2Q74K/G0AB8FK -->
-    <radialGradient id="sparkle">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-  <!-- $>= -->
-  <rect width="1200" height="600" fill="url(#bgGrad)"/>
-
-  <!-- 54O=>5 A8O=85 A;520 -->
-  <ellipse cx="150" cy="300" rx="250" ry="300" fill="#00c8ff" opacity="0.06"/>
-  <ellipse cx="150" cy="300" rx="150" ry="200" fill="#00c8ff" opacity="0.08"/>
-
-  <!-- 3=5==>5 A8O=85 A?@020 -->
-  <ellipse cx="1050" cy="300" rx="250" ry="300" fill="#ff5500" opacity="0.06"/>
-  <ellipse cx="1050" cy="300" rx="150" ry="200" fill="#ff5500" opacity="0.08"/>
-
-  <!-- 5:>@0B82=K5 G0AB8FK: A=568=:8 A;520 -->
-  <circle cx="80" cy="120" r="2" fill="#b0e0ff" opacity="0.7"/>
-  <circle cx="130" cy="200" r="1.5" fill="#b0e0ff" opacity="0.5"/>
-  <circle cx="60" cy="350" r="2.5" fill="#b0e0ff" opacity="0.6"/>
-  <circle cx="200" cy="150" r="1" fill="#e0f0ff" opacity="0.8"/>
-  <circle cx="170" cy="420" r="2" fill="#b0e0ff" opacity="0.4"/>
-  <circle cx="100" cy="500" r="1.5" fill="#e0f0ff" opacity="0.5"/>
-  <circle cx="240" cy="100" r="1" fill="#b0e0ff" opacity="0.6"/>
-  <circle cx="50" cy="250" r="2" fill="#e0f0ff" opacity="0.3"/>
-
-  <!-- 5:>@0B82=K5 G0AB8FK: 8A:@K A?@020 -->
-  <circle cx="1120" cy="130" r="2" fill="#ff8800" opacity="0.7"/>
-  <circle cx="1070" cy="210" r="1.5" fill="#ff6600" opacity="0.5"/>
-  <circle cx="1140" cy="360" r="2.5" fill="#ffaa00" opacity="0.6"/>
-  <circle cx="1000" cy="160" r="1" fill="#ffe44d" opacity="0.8"/>
-  <circle cx="1030" cy="430" r="2" fill="#ff8800" opacity="0.4"/>
-  <circle cx="1100" cy="510" r="1.5" fill="#ffe44d" opacity="0.5"/>
-  <circle cx="960" cy="110" r="1" fill="#ff6600" opacity="0.6"/>
-  <circle cx="1150" cy="260" r="2" fill="#ffaa00" opacity="0.3"/>
-
-  <!-- ===== /   (A;520) ===== -->
-  <g transform="translate(120, 180)" filter="url(#iceGlow)">
-    <!-- "5;> -->
-    <ellipse cx="60" cy="120" rx="50" ry="80" fill="url(#iceGrad)" opacity="0.9"/>
-    <!-- >;>20 -->
-    <ellipse cx="60" cy="30" rx="35" ry="30" fill="url(#iceGrad)"/>
-    <!-- ;070 -->
-    <ellipse cx="48" cy="25" rx="6" ry="7" fill="#e0f0ff"/>
-    <ellipse cx="48" cy="26" rx="3" ry="4" fill="#0040aa"/>
-    <circle cx="47" cy="24" r="1.5" fill="#fff"/>
-    <!--  >30 -->
-    <path d="M35,5 L25,-20 L40,8" fill="#a0d0ee" opacity="0.8"/>
-    <path d="M85,5 L95,-20 L80,8" fill="#a0d0ee" opacity="0.8"/>
-    <!-- @K;> ;52>5 -->
-    <path d="M10,80 Q-40,40 -20,10 Q0,30 10,60 Z" fill="#00c8ff" opacity="0.3"/>
-    <!-- @K;> ?@02>5 -->
-    <path d="M110,80 Q160,40 140,10 Q120,30 110,60 Z" fill="#00c8ff" opacity="0.3"/>
-    <!-- KE0=85 (E>;>4) -->
-    <ellipse cx="60" cy="60" rx="30" ry="10" fill="#00c8ff" opacity="0.15">
-      <animate attributeName="rx" values="30;45;30" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.15;0.25;0.15" dur="2s" repeatCount="indefinite"/>
-    </ellipse>
-    <!-- %2>AB -->
-    <path d="M60,200 Q30,230 10,260 Q20,240 40,235 Q55,235 60,200" fill="url(#iceGrad)" opacity="0.7"/>
-  </g>
-
-  <!-- ===== +   (A?@020) ===== -->
-  <g transform="translate(920, 180)" filter="url(#fireGlow)">
-    <!-- "5;> -->
-    <ellipse cx="60" cy="120" rx="50" ry="80" fill="url(#fireGrad)" opacity="0.9"/>
-    <!-- >;>20 -->
-    <ellipse cx="60" cy="30" rx="35" ry="30" fill="url(#fireGrad)"/>
-    <!-- ;070 -->
-    <ellipse cx="72" cy="25" rx="6" ry="7" fill="#ffe0a0"/>
-    <ellipse cx="72" cy="26" rx="3" ry="4" fill="#cc2200"/>
-    <circle cx="73" cy="24" r="1.5" fill="#fff"/>
-    <!--  >30 -->
-    <path d="M35,5 L25,-20 L40,8" fill="#ffcc44" opacity="0.8"/>
-    <path d="M85,5 L95,-20 L80,8" fill="#ffcc44" opacity="0.8"/>
-    <!-- @K;> ;52>5 -->
-    <path d="M10,80 Q-40,40 -20,10 Q0,30 10,60 Z" fill="#ff6600" opacity="0.3"/>
-    <!-- @K;> ?@02>5 -->
-    <path d="M110,80 Q160,40 140,10 Q120,30 110,60 Z" fill="#ff6600" opacity="0.3"/>
-    <!-- KE0=85 (>3>=L) -->
-    <ellipse cx="60" cy="60" rx="30" ry="10" fill="#ff6600" opacity="0.15">
-      <animate attributeName="rx" values="30;45;30" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.15;0.3;0.15" dur="2s" repeatCount="indefinite"/>
-    </ellipse>
-    <!-- %2>AB -->
-    <path d="M60,200 Q90,230 110,260 Q100,240 80,235 Q65,235 60,200" fill="url(#fireGrad)" opacity="0.7"/>
-  </g>
-
-  <!-- ===== "/     (F5=B@) ===== -->
-  <g transform="translate(340, 180)">
-    <!-- =5H=OO @0<:0 -->
-    <rect x="-10" y="-10" width="540" height="260" rx="14" fill="none" stroke="url(#goldGrad)" stroke-width="4" filter="url(#glow)"/>
-    <!-- =CB@5==89 D>= -->
-    <rect x="0" y="0" width="520" height="240" rx="10" fill="#0a0a28" opacity="0.9"/>
-
-    <!-- 5 10@010=>2 × 3 @O40 -->
-    <!-- 0@010= 1 -->
-    <rect x="6" y="6" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="55" y="50" text-anchor="middle" fill="#8090a0" font-size="28" font-weight="bold" font-family="serif">K</text>
-    <rect x="6" y="84" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="55" y="128" text-anchor="middle" fill="#00c8ff" font-size="28" font-family="serif">=2</text>
-    <rect x="6" y="162" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="55" y="206" text-anchor="middle" fill="#8090a0" font-size="28" font-weight="bold" font-family="serif">A</text>
-
-    <!-- 0@010= 2 -->
-    <rect x="110" y="6" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="159" y="50" text-anchor="middle" fill="#aa88dd" font-size="28" font-family="serif">=Ž</text>
-    <rect x="110" y="84" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="159" y="130" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="900" font-family="sans-serif" style="background:linear-gradient(#ff3c00,#ffd700,#00c8ff)">W</text>
-    <rect x="110" y="162" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="159" y="206" text-anchor="middle" fill="#aa88dd" font-size="28" font-family="serif">”</text>
-
-    <!-- 0@010= 3 -->
-    <rect x="214" y="6" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="263" y="50" text-anchor="middle" fill="#ff6600" font-size="28" font-family="serif">=	</text>
-    <rect x="214" y="84" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="263" y="128" text-anchor="middle" fill="#ffd700" font-size="28" font-family="serif">>Z</text>
-    <rect x="214" y="162" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="263" y="206" text-anchor="middle" fill="#00ff80" font-size="28" font-family="serif">/</text>
-
-    <!-- 0@010= 4 -->
-    <rect x="318" y="6" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="367" y="50" text-anchor="middle" fill="#8090a0" font-size="28" font-weight="bold" font-family="serif">Q</text>
-    <rect x="318" y="84" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="367" y="128" text-anchor="middle" fill="#aa88dd" font-size="28" font-family="serif">=á</text>
-    <rect x="318" y="162" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="367" y="206" text-anchor="middle" fill="#8090a0" font-size="28" font-weight="bold" font-family="serif">10</text>
-
-    <!-- 0@010= 5 -->
-    <rect x="422" y="6" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="471" y="50" text-anchor="middle" fill="#aa88dd" font-size="28" font-family="serif">±</text>
-    <rect x="422" y="84" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="471" y="128" text-anchor="middle" fill="#00c8ff" font-size="28" font-family="serif">=2</text>
-    <rect x="422" y="162" width="98" height="72" rx="6" fill="#0c0c30" stroke="#ffd70040" stroke-width="1"/>
-    <text x="471" y="206" text-anchor="middle" fill="#8090a0" font-size="28" font-weight="bold" font-family="serif">J</text>
-  </g>
-
-  <!-- ===== ( " "# + (225@EC) ===== -->
-  <g transform="translate(300, 130)">
-    <rect x="0" y="0" width="600" height="20" rx="10" fill="url(#scaleGrad)" stroke="#b8860b" stroke-width="2" filter="url(#glow)"/>
-    <!-- 5B:8 -->
-    <text x="10" y="38" fill="#8090a0" font-size="10" font-family="sans-serif">-30</text>
-    <text x="195" y="38" fill="#8090a0" font-size="10" font-family="sans-serif">-10</text>
-    <text x="295" y="38" fill="#aaaacc" font-size="10" font-family="sans-serif">0</text>
-    <text x="395" y="38" fill="#8090a0" font-size="10" font-family="sans-serif">+10</text>
-    <text x="580" y="38" fill="#8090a0" font-size="10" font-family="sans-serif">+30</text>
-    <!-- 0@:5@ -->
-    <circle cx="300" cy="10" r="14" fill="url(#goldGrad)" stroke="#ffd700" stroke-width="2" filter="url(#bigGlow)">
-      <animate attributeName="r" values="14;16;14" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="300" cy="10" r="5" fill="#fff" opacity="0.8"/>
-    <circle cx="300" cy="10" r="3" fill="#1a0a00"/>
-  </g>
-
-  <!-- =====  ===== -->
-  <!-- TWIN -->
-  <text x="460" y="95" text-anchor="end" font-family="serif" font-size="60" font-weight="900" letter-spacing="8" fill="url(#iceGrad)" filter="url(#glow)">TWIN</text>
-  <!-- DRAGONS -->
-  <text x="480" y="95" text-anchor="start" font-family="serif" font-size="60" font-weight="900" letter-spacing="8" fill="url(#fireGrad)" filter="url(#glow)">DRAGONS</text>
-
-  <!-- >4703>;>2>: -->
-  <text x="600" y="115" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#aaaacc" letter-spacing="6">D  /  ×  +  =%</text>
-
-  <!-- ===== // , ===== -->
-  <g transform="translate(300, 470)">
-    <rect x="0" y="0" width="600" height="50" rx="10" fill="#0c0c24" opacity="0.9" stroke="#ffd70030" stroke-width="1"/>
-    <!-- 0;0=A -->
-    <text x="60" y="18" text-anchor="middle" font-size="10" fill="#8888aa" font-family="sans-serif" letter-spacing="2">!</text>
-    <text x="60" y="38" text-anchor="middle" font-size="18" fill="#ffd700" font-family="sans-serif" font-weight="bold">10 000.00</text>
-    <!-- !B02:0 -->
-    <text x="230" y="18" text-anchor="middle" font-size="10" fill="#8888aa" font-family="sans-serif" letter-spacing="2">!"</text>
-    <text x="230" y="38" text-anchor="middle" font-size="18" fill="#ffd700" font-family="sans-serif" font-weight="bold">20.00</text>
-    <!-- !?8= -->
-    <rect x="330" y="5" width="100" height="40" rx="8" fill="url(#goldGrad)" opacity="0.9"/>
-    <text x="380" y="30" text-anchor="middle" font-size="16" fill="#1a0a00" font-family="sans-serif" font-weight="bold">¶ !</text>
-    <!-- K83@KH -->
-    <text x="510" y="18" text-anchor="middle" font-size="10" fill="#8888aa" font-family="sans-serif" letter-spacing="2">+ +(</text>
-    <text x="510" y="38" text-anchor="middle" font-size="18" fill="#00ff80" font-family="sans-serif" font-weight="bold">0.00</text>
-  </g>
-
-  <!-- 5:>@0B82=0O ;8=8O 2=87C -->
-  <line x1="100" y1="560" x2="1100" y2="560" stroke="url(#goldGrad)" stroke-width="1" opacity="0.3"/>
-  <text x="600" y="580" text-anchor="middle" font-size="11" fill="#555577" font-family="sans-serif">TWIN DRAGONS © 2026 | RTP 96% | 20  | ! // ",!",</text>
-</svg>
